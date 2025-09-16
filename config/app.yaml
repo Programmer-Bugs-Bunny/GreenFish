@@ -1,0 +1,50 @@
+# 应用程序基础配置
+app:
+  host: "0.0.0.0"
+  port: 8080
+  version: "1.0.0"
+  debug: true
+  timezone: "Asia/Shanghai"
+  environment: "development"
+
+# 日志配置
+logger:
+  level: "info"          # debug, info, warn, error
+  format: "console"      # console, json
+  output: "file"       # stdout, file
+  filename: "logs/app.log"
+  max_size: 100          # MB
+  max_age: 30            # days
+  max_backups: 3
+  compress: true
+
+# 数据库配置
+database:
+  host: "192.168.1.5"
+  port: 5432
+  username: "admin"
+  password: "123456"
+  dbname: "dev_db"
+  sslmode: "disable"
+  max_idle_conns: 10
+  max_open_conns: 100
+  conn_max_lifetime: 60  # minutes
+
+# JWT配置
+jwt:
+  secret: "your-secret-key-change-in-production"
+  expire_hours: 24
+  issuer: "go-web-template"
+
+# Consul服务注册配置
+consul:
+  enabled: false
+  address: "http://localhost:8500"
+  service_name: "go-web-template"
+
+# Zipkin链路追踪配置
+zipkin:
+  enabled: false
+  service_name: "go-web-template"
+  endpoint: "http://localhost:9411/api/v2/spans"
+  sample_rate: 1.0
