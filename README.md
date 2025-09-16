@@ -1,7 +1,9 @@
-# Go Web 基础框架模板
+# {{.ProjectName}}
 
-一个基于 **Gin + GORM(Postgres) + Zap + JWT** 的 Go Web 项目基础框架，支持模块化开发，内置日志、配置、数据库、路由、健康检查等常用功能。  
-本仓库已设置为 **Template Repository**，可直接用来创建新项目。
+{{.Description}}
+
+**作者**: {{.Author}}  
+基于 **Gin + GORM(Postgres) + Zap + JWT** 的 Go Web 项目基础框架，支持模块化开发，内置日志、配置、数据库、路由、健康检查等常用功能。
 
 ---
 
@@ -21,7 +23,7 @@
 ## 📦 使用方式
 
 ### 1. 基于模板创建新仓库
-1. 打开本仓库首页：[GoWebTemplate](https://github.com/Programmer-Bugs-Bunny/GoWebTemplate)
+1. 打开本仓库首页：[GreenFish](https://github.com/Programmer-Bugs-Bunny/GreenFish)
 2. 点击绿色按钮 **Use this template → Create a new repository**
 3. 输入新仓库名称，例如 `CardService`，然后创建。
 

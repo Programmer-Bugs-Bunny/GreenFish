@@ -1,10 +1,10 @@
 # 应用程序基础配置
 app:
   host: "0.0.0.0"
-  port: 8080
+  port: {{.Port}}
   version: "1.0.0"
   debug: true
-  timezone: "Asia/Shanghai"
+  timezone: "{{.Timezone}}"
   environment: "development"
 
 # 日志配置
@@ -34,17 +34,17 @@ database:
 jwt:
   secret: "your-secret-key-change-in-production"
   expire_hours: 24
-  issuer: "go-web-template"
+  issuer: "{{.ProjectName}}"
 
 # Consul服务注册配置
 consul:
   enabled: false
   address: "http://localhost:8500"
-  service_name: "go-web-template"
+  service_name: "{{.ProjectName}}"
 
 # Zipkin链路追踪配置
 zipkin:
   enabled: false
-  service_name: "go-web-template"
+  service_name: "{{.ProjectName}}"
   endpoint: "http://localhost:9411/api/v2/spans"
   sample_rate: 1.0

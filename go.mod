@@ -1,4 +1,4 @@
-module go-web-template
+module {{.ModuleName}}
 
 go 1.25
 
